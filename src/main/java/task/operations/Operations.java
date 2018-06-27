@@ -45,7 +45,15 @@ public class Operations {
     @GET
     @Path("/balance/{accountId}")
     public Response balance(@PathParam("accountId") final long accountId) {
-        return Response.ok(Main.DATA_SOURCE.get(accountId).getBalance()).build();
+
+        Account account = Main.DATA_SOURCE.get(accountId);
+        if (account == null) {
+            return Response
+                    .status(Response.Status.NOT_FOUND)
+                    .entity("No such account found")
+                    .build();
+        }
+        return Response.ok(account.getBalance()).build();
     }
 
 }
