@@ -18,7 +18,9 @@ Standalone RESTful service for money transfer between accounts.
    **Required:**
  
    `firstAccountId=[long]` - id of account which money will be transferred from
+   
    `secondAccountId=[long]` - id of account which money will be transferred to
+   
    `amount=[double]` - amount of money for transfer
 
 * **Success Response:**
