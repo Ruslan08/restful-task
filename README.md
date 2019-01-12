@@ -1,5 +1,5 @@
 # restful-task
-Standalone RESTful service for money transfer between accounts.
+Minimalistic example of standalone RESTful service for money transfer between accounts.
 
 **Transfer between accounts**
 ----
